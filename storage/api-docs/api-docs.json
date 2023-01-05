@@ -1,0 +1,32 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/users": {
+            "get": {
+                "operationId": "e73db8180eb4b66a6c81291629cb3515",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            }
+        },
+        "/api/createAPI": {
+            "get": {
+                "operationId": "eda840f39caabed4c855027f1a33aa46",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
