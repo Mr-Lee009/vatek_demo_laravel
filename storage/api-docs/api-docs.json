@@ -5,6 +5,16 @@
         "version": "0.1"
     },
     "paths": {
+        "/api/hotels/": {
+            "get": {
+                "operationId": "afac59c056e810ea3310aef29da0d536",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            }
+        },
         "/api/users": {
             "get": {
                 "operationId": "e73db8180eb4b66a6c81291629cb3515",

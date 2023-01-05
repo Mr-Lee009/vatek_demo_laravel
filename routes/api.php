@@ -21,3 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/createAPI', [\App\Http\Controllers\HomeController::class, 'createAPI']);
+
+//config by group
+Route::group([
+    'prefix' => '/v1',
+    'namespace' => 'App\Http\Controllers\Api',
+
+], function () {
+    Route::apiResource("/hotels", \App\Http\Controllers\Api\HotelController::class);
+    //Route::apiResource("/rooms", RoomController::class);
+    //Route::apiResource("/bookings", BookingController::class);
+});
