@@ -41,6 +41,10 @@ Route::group(['prefix' => '/v1',
         Route::delete("/{room}", [RoomController::class, "destroy"]);
     });
 
+    Route::group(['prefix' => '/bookings'], function () {
+        Route::get("/", [RoomController::class, "index"]);
+    });
+
     //Route::apiResource("/bookings", BookingController::class);
 });
 

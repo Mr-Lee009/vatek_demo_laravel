@@ -19,7 +19,7 @@ class Booking extends Model
 
     public $connection = 'mysql_2';
 
-    protected $table = 'bookings';
+    protected $table = 'booking';
     protected $primaryKey = 'UUID';
     public $incrementing = false;
 

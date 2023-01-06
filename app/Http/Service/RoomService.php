@@ -43,12 +43,24 @@ class RoomService
     public
     function save(StoreRoomRequest $request)
     {
-        //save
-        //  $Room = new Room();
-        //  $Room->NAME_ROOM = 'A';
-        //  $Room->DESCIPTION = 'phong vip cho cau thu 222xxx';
-        //  $Room->HOTEL_ID = 1;
-        //  $Room->save();
+        //        C1
+        //        save
+        //          $Room = new Room();
+        //          $Room->NAME_ROOM = 'A';
+        //          $Room->DESCIPTION = 'phong vip cho cau thu 222xxx';
+        //          $Room->HOTEL_ID = 1;
+        //          $Room->save();
+        //
+        //        C2:
+        //        $form_data = array(
+        //            $request->nameRoom,
+        //            $request->typeRoom,
+        //            $request->description,
+        //            $request->hotelId
+        //        );
+        //        $zoom = DB::insert("INSERT INTO vatek_hotel_2.rooms (NAME_ROOM, TYPE_ROOM, DESCRIPTION, HOTEL_ID)
+        //        VALUES (?,?,?,?)",$form_data);
+        //        return $zoom;
 
         $form_data = array(
             "NAME_ROOM" => $request->nameRoom,
