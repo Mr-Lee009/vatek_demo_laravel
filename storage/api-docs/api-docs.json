@@ -15,6 +15,89 @@
                 }
             }
         },
+        "/api/rooms/": {
+            "get": {
+                "operationId": "7a85a64d22803d05a8e9147515368c1d",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            },
+            "put": {
+                "operationId": "c5cd3544c20216917ab9ddd4bfb532cf",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "2ee9fee2c3cd97d4d6dbcc07aab7a750",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            }
+        },
+        "/api/rooms/find/": {
+            "get": {
+                "summary": "find Room",
+                "operationId": "1c7f68a081213e3f6b83500b82ee404b",
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                }
+            },
+            "post": {
+                "summary": "create room",
+                "operationId": "8d2a91467cd5ffd3ef46c1cc95f4cf81",
+                "parameters": [
+                    {
+                        "parameter": "hotelId",
+                        "name": "hotelId",
+                        "in": "query",
+                        "description": "hotel Id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "nameRoom",
+                        "name": "nameRoom",
+                        "in": "query",
+                        "description": "name's room",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "description",
+                        "name": "description",
+                        "in": "query",
+                        "description": "description about room",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An example endpoint"
+                    }
+                },
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ]
+            }
+        },
         "/api/users": {
             "get": {
                 "operationId": "e73db8180eb4b66a6c81291629cb3515",

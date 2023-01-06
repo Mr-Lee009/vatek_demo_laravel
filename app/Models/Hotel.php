@@ -11,7 +11,7 @@ class Hotel extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        "ID",
+        "UUID",
         "NAME_HOTEL",
         "DESCRIPTION",
         "CREATE_DATE",
@@ -19,10 +19,13 @@ class Hotel extends Model
     ];
 
     protected $table = 'hotels';
-    protected $primaryKey = 'ID';
+    protected $primaryKey = 'UUID';
 
     const CREATED_AT = 'CREATE_DATE';
     const UPDATED_AT = 'UPDATE_DATE';
+
+    public $incrementing = false;
+
 
     public function rooms(){
         return $this->hasMany(Room::class,"HOTEL_ID");

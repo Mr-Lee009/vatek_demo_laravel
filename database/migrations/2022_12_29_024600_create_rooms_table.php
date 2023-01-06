@@ -13,9 +13,8 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('rooms', function (Blueprint $table) {
-            $table->increments("ID"); // tu tao UUID
-            $table->integer("HOTEL_ID");
-
+            //$table->uuid("UUID")->default(DB::raw('(UUID())'))->primary(); // tu tao UUID
+            $table->string("UUID")->default(DB::raw('(UUID())'))->primary();
             $table->string("NAME_ROOM");
             $table->string("TYPE_ROOM");
             $table->string("DESCRIPTION");
@@ -23,11 +22,14 @@ return new class extends Migration {
             $table->timestamp('CREATE_DATE')->nullable();
             $table->timestamp('UPDATE_DATE')->nullable();
 
+            $table->string("HOTEL_ID");
+
             //set foreign key
             $table->foreign("HOTEL_ID")
-                ->references('ID')
-                ->on('hotels');
-                //->onDelete('cascade');
+                ->references('UUID')
+                ->on('hotels')
+                ->onDelete('cascade') ;
+
         });
     }
 

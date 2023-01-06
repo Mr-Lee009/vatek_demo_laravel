@@ -10,7 +10,7 @@ class Room extends Model
     use HasFactory;
 
     protected $fillable = [
-        "ID",
+        "UUID",
         "HOTEL_ID",
         "NAME_ROOM",
         "TYPE_ROOM",
@@ -33,12 +33,12 @@ class Room extends Model
     protected $table = 'rooms';
 
     // cau hinh khoa chinh
-    protected $primaryKey = 'ID';
+    protected $primaryKey = 'UUID';
 
     // trong truong hop khoa chinh ko phai kieu so hoac Auto_Increment , khai bao nhu sau
-    public $incrementing = true;
+    public $incrementing = false;
 
-    public $keyType = 'integer';
+    public $keyType = 'string';
 
     const CREATED_AT = 'CREATE_DATE';
     const UPDATED_AT = 'UPDATE_DATE';
@@ -48,7 +48,7 @@ class Room extends Model
     ];
 
     public function hotel(){
-        return $this->belongsTo(Hotel::class,"HOTEL_ID","ID");
+        return $this->belongsTo(Hotel::class,"HOTEL_ID","UUID");
     }
 
 //    public function bookings(){
