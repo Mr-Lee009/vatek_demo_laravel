@@ -24,9 +24,18 @@ class HotelController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/hotels/",
-     *     @OA\Response(response="200", description="An example endpoint")
-     * )
+     *     path="/api/v1/hotels/",
+     *      summary="Title",
+     *      security={{"bearer_token":{}}},
+     *      @OA\Response(
+     *          response=200,
+     *          description="Donec sollicitudin molestie malesuada."
+     *      ),
+     *      @OA\Response(
+     *          response="default",
+     *          description="An error has occurred."
+     *      )
+     *  )
      */
     public function index()
     {

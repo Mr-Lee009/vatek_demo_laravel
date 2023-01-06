@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Service\AuthService;
 use Illuminate\Http\Request;
 
-/**
- * @SWG\SecurityScheme(
- *   securityDefinition="APIKeyHeader",
- *   type="apiKey",
- *   in="header",
- *   name="Authentication",
- * )
- */
+///**
+// * @SWG\SecurityScheme(
+// *   securityDefinition="APIKeyHeader",
+// *   type="apiKey",
+// *   in="header",
+// *   name="Authentication",
+// * )
+// */
+
+
 class AuthController extends Controller
 {
     public $authService = null;

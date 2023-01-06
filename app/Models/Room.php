@@ -21,7 +21,7 @@ class Room extends Model
 
 
     // khi ban muon thay doi database connection cho model
-    //public $connection = 'ten_connection';
+    //public $connection = 'mysql_2';
 
     // $timestamps = true => update 2 cot CREATE_DATE va UPDATE_DATE trong DB
     public $timestamps = true;

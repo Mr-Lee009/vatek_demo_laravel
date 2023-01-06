@@ -42,7 +42,7 @@ class RoomController extends Controller
 
     /**
      * @OA\Get  (
-     *     path="/api/rooms/",
+     *     path="/api/v1/rooms/",
      *     @OA\Response(response="200", description="An example endpoint")
      * )
      */
@@ -54,7 +54,7 @@ class RoomController extends Controller
 
     /**
      * @OA\Get  (
-     *     path="/api/rooms/find/",
+     *     path="/api/v1/rooms/find/",
      *     summary="find Room",
      *     @OA\Response(response="200", description="An example endpoint")
      * )
@@ -66,7 +66,7 @@ class RoomController extends Controller
 
     /**
      * @OA\Post   (
-     *     path="/api/rooms/find/",
+     *     path="/api/v1/rooms/find/",
      *     summary="create room",
      *     security={
      *       {"ApiKeyAuth": {}}
@@ -135,7 +135,7 @@ class RoomController extends Controller
 
     /**
      * @OA\Put  (
-     *     path="/api/rooms/",
+     *     path="/api/v1/rooms/",
      *     @OA\Response(response="200", description="An example endpoint")
      * )
      */
@@ -146,7 +146,7 @@ class RoomController extends Controller
 
     /**
      * @OA\Delete   (
-     *     path="/api/rooms/",
+     *     path="/api/v1/rooms/",
      *     @OA\Response(response="200", description="An example endpoint")
      * )
      */

@@ -5,19 +5,28 @@
         "version": "0.1"
     },
     "paths": {
-        "/api/hotels/": {
+        "/api/v1/hotels/": {
             "get": {
-                "operationId": "afac59c056e810ea3310aef29da0d536",
+                "summary": "Title",
+                "operationId": "0afb911f2cfc3b31acad7ffb70e7cad7",
                 "responses": {
                     "200": {
-                        "description": "An example endpoint"
+                        "description": "Donec sollicitudin molestie malesuada."
+                    },
+                    "default": {
+                        "description": "An error has occurred."
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
             }
         },
-        "/api/rooms/": {
+        "/api/v1/rooms/": {
             "get": {
-                "operationId": "7a85a64d22803d05a8e9147515368c1d",
+                "operationId": "03c35b421b498acbc200af9aff2c5f72",
                 "responses": {
                     "200": {
                         "description": "An example endpoint"
@@ -25,7 +34,7 @@
                 }
             },
             "put": {
-                "operationId": "c5cd3544c20216917ab9ddd4bfb532cf",
+                "operationId": "f2c82dfafbeca3248c4ca39c92ed35a9",
                 "responses": {
                     "200": {
                         "description": "An example endpoint"
@@ -33,7 +42,7 @@
                 }
             },
             "delete": {
-                "operationId": "2ee9fee2c3cd97d4d6dbcc07aab7a750",
+                "operationId": "3f2b225cf5c641cf3c40f11faf0eab6d",
                 "responses": {
                     "200": {
                         "description": "An example endpoint"
@@ -41,10 +50,10 @@
                 }
             }
         },
-        "/api/rooms/find/": {
+        "/api/v1/rooms/find/": {
             "get": {
                 "summary": "find Room",
-                "operationId": "1c7f68a081213e3f6b83500b82ee404b",
+                "operationId": "4f0399cb4407d3c2c4c4660d226b496a",
                 "responses": {
                     "200": {
                         "description": "An example endpoint"
@@ -53,7 +62,7 @@
             },
             "post": {
                 "summary": "create room",
-                "operationId": "8d2a91467cd5ffd3ef46c1cc95f4cf81",
+                "operationId": "b9880766f8b8df9bf3227b12fef38180",
                 "parameters": [
                     {
                         "parameter": "hotelId",
@@ -116,6 +125,18 @@
                         "description": "An example endpoint"
                     }
                 }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiAuth": {
+                "type": "http",
+                "description": "Login with email and password to get the authentication token",
+                "name": "Token based Based",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
             }
         }
     },
