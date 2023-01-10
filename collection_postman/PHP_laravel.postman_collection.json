@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "6f4750fe-11d0-4f27-9aa4-18aee850f2b9",
+		"name": "PHP_laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "_token",
+								"type": "text",
+								"value": "oaALY1zFpHtZ7PIDubyrY5dJVhcWTp2DnXcKzhCp ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"quannh4@gmail.com\",\r\n    \"name\": \"nguy huu quan 2\",\r\n    \"password\": \"quannh\",\r\n    \"password_confirmation\": \"quannh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/auth/register",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "_token",
+								"type": "text",
+								"value": "oaALY1zFpHtZ7PIDubyrY5dJVhcWTp2DnXcKzhCp ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"quannh4@gmail.com\",\r\n    \"password\": \"quannh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/auth/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token_php}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "oaALY1zFpHtZ7PIDubyrY5dJVhcWTp2DnXcKzhCp ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"quannh\",\r\n    \"new_password\": \"quannh_3\",\r\n    \"new_password_confirmation\": \"quannh_3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/change-pass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"change-pass"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/auth/user-profile?Authorization=Bearer {{token_php}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"user-profile"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer {{token_php}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "find all room",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token_php}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update room",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeRoom\": \"luxury2\",\r\n    \"nameRoom\": \"1090\",\r\n    \"description\": \"Phong vip\",\r\n    \"hotelId\": \"82ccdefe-8d14-11ed-bfaa-0242ac120002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms/0003b307-8d1d-11ed-bfaa-0242ac120002",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"0003b307-8d1d-11ed-bfaa-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create room",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token_php}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelId\": \"82ccdefe-8d14-11ed-bfaa-0242ac120002\",\r\n    \"nameRoom\": \"cong vu 1900 cxcc\",\r\n    \"typeRoom\": \"luxyry\",\r\n    \"description\": \"phong vip cho khach hang\",\r\n    \"createDate\": \"2023-01-04T08:27:25.000000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteroom",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_php}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "_token",
+								"value": "oaALY1zFpHtZ7PIDubyrY5dJVhcWTp2DnXcKzhCp ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms/cbf68637-8d1b-11ed-bfaa-0242ac120002",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"cbf68637-8d1b-11ed-bfaa-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get hotels",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}"
+							},
+							{
+								"key": "api-token",
+								"value": "acbajbsckbjbcajs",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/documentation",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"documentation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all room",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}"
+							},
+							{
+								"key": "apiKey",
+								"value": "ducla-1997",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "accessToken",
+								"value": "{{token_php}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}"
+							},
+							{
+								"key": "apiKey",
+								"value": "ducla-1997",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "accessToken",
+								"value": "{{token_php}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/bookings",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find room by key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token_php}}"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms/typeRoom/vip",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"typeRoom",
+								"vip"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer {{token_php}}",
+									"disabled": true
+								},
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paging",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_php}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/rooms?page=2",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
