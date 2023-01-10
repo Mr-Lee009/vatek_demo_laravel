@@ -25,7 +25,7 @@ class Hotel extends Model
     const UPDATED_AT = 'UPDATE_DATE';
 
     public $incrementing = false;
-
+    protected $dateFormat = 'd-m-Y';
 
     public function rooms(){
         return $this->hasMany(Room::class,"HOTEL_ID");

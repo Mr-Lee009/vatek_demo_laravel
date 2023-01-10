@@ -26,4 +26,6 @@ class Booking extends Model
     public $keyType = 'string';
     const CREATED_AT = 'CREATE_DATE';
     const UPDATED_AT = 'UPDATE_DATE';
+
+    protected $dateFormat = 'd-m-Y';
 }
